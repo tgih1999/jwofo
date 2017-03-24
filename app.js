@@ -47,7 +47,6 @@ $(document).keypress(function(e) {
     });
   }
   function myFunction() {
-    console.log("here");
     const new_text = document.getElementById('submit_text');
     new_text.innerHTML = "Ofo me!";
   }
