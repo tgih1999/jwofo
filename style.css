@@ -7,12 +7,6 @@ body{
   margin:0;
 }
 
-html,body{
-	-webkit-overflow-scrolling : touch !important;
-	overflow: auto !important;
-	height: 100% !important;
-}
-
 .clearfix{
   clear:both;
 }
