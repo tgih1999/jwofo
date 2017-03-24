@@ -1,3 +1,9 @@
+$(document).keypress(function(e) {
+  if(e.which == 13) {
+    document.getElementById('submit_button').click();
+  }
+});
+
 (function() {
   const config = {
     apiKey: "AIzaSyCgh3nk8nxUoqFir2LjKYuYiYaRPtQKT0c",
@@ -6,7 +12,7 @@
     storageBucket: "ofome-f7639.appspot.com",
     messagingSenderId: "181493512430"
   };
-  
+
   firebase.initializeApp(config);
 
   submit_button = document.getElementById('submit_button');
@@ -33,10 +39,16 @@
             new_text.innerHTML = num;
           }
           else{
-            new_text.innerHTML = "Invalid Entry";
+            new_text.innerHTML = "Try Again";
+            setTimeout(myFunction, 3000)
           }
         });
       });
     });
+  }
+  function myFunction() {
+    console.log("here");
+    const new_text = document.getElementById('submit_text');
+    new_text.innerHTML = "Ofo me!";
   }
 }());
