@@ -130,5 +130,10 @@ input[type=text]:focus, input[type=password]:focus {
       color:    #FF0000;
    }
 
+   input[type='text'], input[type='password'],
+textarea {
+  font-size: 16px;
+}
+
  }
  }
