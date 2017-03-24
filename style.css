@@ -129,7 +129,5 @@ input[type=text]:focus, input[type=password]:focus {
    :-ms-input-placeholder { /* Internet Explorer 10-11 */
       color:    #FF0000;
    }
-   
-
  }
  }
