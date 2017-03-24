@@ -58,6 +58,10 @@ input[type=text]:focus, input[type=password]:focus {
   transition: 0.5s;
 }
 
+#submit_text{
+  transition: 0.3s all;
+}
+
 #submit_button:hover{
   opacity: 0.7;
   cursor: pointer;
@@ -93,9 +97,7 @@ input[type=text]:focus, input[type=password]:focus {
        z-index: 1;
        margin-top: 25px;
    }
-   input[type=text]:focus, input[type=password]:focus {
-       width: 70%;
-   }
+
    #inputs{
      margin-top: 55%;
    /*  margin-top: 20%;
