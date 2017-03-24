@@ -33,8 +33,10 @@ input[type=text] , input[type=number], input[type=password]{
     z-index: 1;
 }
 
+@media screen and (min-width: 1024px) {
 input[type=text]:focus, input[type=password]:focus {
     width: 25%;
+}
 }
 
 #inputs{
