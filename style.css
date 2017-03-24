@@ -1,0 +1,147 @@
+html {
+  overflow-y: scroll;
+}
+
+body{
+  padding:0;
+  margin:0;
+}
+
+.clearfix{
+  clear:both;
+}
+
+#background_image{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+}
+
+input[type=text] , input[type=number], input[type=password]{
+    width: 20%;
+    height: 55px;
+    box-sizing: border-box;
+    border: 4px solid #FFFF00;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFF00;
+    background-color: transparent;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    z-index: 1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    width: 25%;
+}
+
+#inputs{
+  margin-top: 20%;
+  position: fixed;
+/*  margin-top: 20%;
+  margin-left: 10%;*/
+  width: 100%;
+  height: 100%;
+/*  margin-top: 20%;*/
+}
+
+#submit_button{
+  width: 20%;
+  height: 55px;
+  color: black;
+  background-color: #FFFF00;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #FFFF00;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #FFFF00;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #FF0000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #FF0000;
+}
+
+#result{
+  border: 5px solid: #FFFF00;
+  height: 25%;
+  width: 25%;
+  position: fixed;
+  z-index: 2;
+}
+
+ @media screen and (max-width: 1020px){
+   input[type=text] , input[type=number], input[type=password]{
+       width: 70%;
+       height: 100px;
+       box-sizing: border-box;
+       border: 4px solid #FFFF00;
+       border-radius: 4px;
+       font-size: 32px;
+       color: #FFFF00;
+       background-color: transparent;
+       padding: 12px 20px 12px 40px;
+       -webkit-transition: width 0.4s ease-in-out;
+       transition: width 0.4s ease-in-out;
+       z-index: 1;
+       margin-top: 25px;
+   }
+
+   input[type=text]:focus, input[type=password]:focus {
+       width: 75%;
+   }
+
+   #inputs{
+     margin-top: 55%;
+     position: fixed;
+   /*  margin-top: 20%;
+     margin-left: 10%;*/
+     width: 100%;
+     height: 100%;
+   /*  margin-top: 20%;*/
+   }
+
+   #submit_button{
+     width: 70%;
+     height: 100px;
+     color: black;
+     background-color: #FFFF00;
+     border: none;
+     border-radius: 4px;
+     font-size: 36px;
+     margin-top: 25px;
+   }
+   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+       color:    #FFFF00;
+   }
+   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #FFFF00;
+      opacity:  1;
+   }
+   ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #FF0000;
+      opacity:  1;
+   }
+   :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color:    #FF0000;
+   }
+
+   #result{
+     border: 5px solid: #FFFF00;
+     height: 25%;
+     width: 25%;
+     position: fixed;
+     z-index: 2;
+   }
+ }
+
+ }
