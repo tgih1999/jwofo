@@ -4,6 +4,14 @@ $(document).keypress(function(e) {
   }
 });
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 (function() {
   const config = {
     apiKey: "AIzaSyCgh3nk8nxUoqFir2LjKYuYiYaRPtQKT0c",
@@ -43,6 +51,30 @@ $(document).keypress(function(e) {
             setTimeout(myFunction, 3000)
           }
         });
+      });
+    });
+  }
+
+  login_button = document.getElementById('login_button');
+
+  if ( submit_button){
+
+    login_button.addEventListener('click', e => {
+      const username = document.getElementById('username_text');
+      const password_account = document.getElementById('password_login_text');
+
+      var pass, num;
+      var temp = firebase.database().ref('bikeObject/' + username.value);
+
+      temp.on('value', function(snapshot) {
+        pass = snapshot.val();
+
+          if (password_account.value == pass || password_account.value.toLowerCase() == pass){
+            console.log("working");
+          }
+          else{
+            console.log("not working");
+          }
       });
     });
   }
