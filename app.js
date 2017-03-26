@@ -32,10 +32,12 @@ function closeNav() {
 
   $('#number_text').click(function(event){
     event.stopPropagation();
+    number_text.blur();
   });
 
   $('#pass_text').click(function(event){
     event.stopPropagation();
+    pass_text.blur();
   });
 
 }());
