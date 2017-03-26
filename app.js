@@ -12,6 +12,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+
 (function() {
   const config = {
     apiKey: "AIzaSyCgh3nk8nxUoqFir2LjKYuYiYaRPtQKT0c",
@@ -23,8 +24,31 @@ function closeNav() {
 
   firebase.initializeApp(config);
 
-  submit_button = document.getElementById('submit_button');
+  bike_form = document.getElementById('number_text');
+  pass_form = document.getElementById('pass_text');
 
+  bike_form.addEventListener('click', e => {
+    number_text.placeholder = "Valid Bikes: 0001-0500";
+  });
+
+  pass_form.addEventListener('click', e => {
+    pass_text.placeholder = "Hint: I'm a Jenny";
+  });
+
+  $(window).click(function() {
+    number_text.placeholder = "Bike Number";
+    pass_text.placeholder = "Password";
+  });
+
+  $('#number_text').click(function(event){
+    event.stopPropagation();
+  });
+
+  $('#pass_text').click(function(event){
+    event.stopPropagation();
+  });
+
+  submit_button = document.getElementById('submit_button');
   if ( submit_button){
 
     submit_button.addEventListener('click', e => {
@@ -57,7 +81,7 @@ function closeNav() {
 
   login_button = document.getElementById('login_button');
 
-  if ( submit_button){
+  if ( login_button){
 
     login_button.addEventListener('click', e => {
       const username = document.getElementById('username_text');
