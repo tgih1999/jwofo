@@ -12,8 +12,18 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-/* JavaScript code for hints on input forms */
-(function(){
+
+(function() {
+  const config = {
+    apiKey: "AIzaSyCgh3nk8nxUoqFir2LjKYuYiYaRPtQKT0c",
+    authDomain: "ofome-f7639.firebaseapp.com",
+    databaseURL: "https://ofome-f7639.firebaseio.com",
+    storageBucket: "ofome-f7639.appspot.com",
+    messagingSenderId: "181493512430"
+  };
+
+  firebase.initializeApp(config);
+
   bike_form = document.getElementById('number_text');
   pass_form = document.getElementById('pass_text');
 
@@ -32,27 +42,11 @@ function closeNav() {
 
   $('#number_text').click(function(event){
     event.stopPropagation();
-    number_text.blur();
   });
 
   $('#pass_text').click(function(event){
     event.stopPropagation();
-    pass_text.blur();
   });
-
-}());
-
-/* Code for firebase initialization and also authenticating password */
-(function() {
-  const config = {
-    apiKey: "AIzaSyCgh3nk8nxUoqFir2LjKYuYiYaRPtQKT0c",
-    authDomain: "ofome-f7639.firebaseapp.com",
-    databaseURL: "https://ofome-f7639.firebaseio.com",
-    storageBucket: "ofome-f7639.appspot.com",
-    messagingSenderId: "181493512430"
-  };
-
-  firebase.initializeApp(config);
 
   submit_button = document.getElementById('submit_button');
   if ( submit_button){
