@@ -62,9 +62,7 @@ body{
 
 /* Expand our input field when on desktop */
 @media screen and (min-width: 1281px){
-  #number_text:focus, #pass_text:focus{
-    width: 25%;
-  }
+
 }
 
 /* Rules for mobile devices in portrait mode */
