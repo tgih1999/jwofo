@@ -1,3 +1,10 @@
+/* File: style.css
+ * Date: March 22nd, 2017
+ * Name: Eric Lin
+ * Description: This file contains the CSS rules for our HTML markup
+ * for the JWOfo App.
+ */
+
 html {
   overflow-y: scroll;
 }
@@ -7,10 +14,7 @@ body{
   margin:0;
 }
 
-.clearfix{
-  clear:both;
-}
-
+/* Background image */
 #background_image{
   width: 100%;
   height: 100%;
@@ -18,10 +22,7 @@ body{
   position: fixed;
 }
 
-#number_text{
-  margin-top: 20%;
-}
-
+/* Input fields */
 #number_text, #pass_text{
   width: 20%;
   height: 55px;
@@ -37,6 +38,7 @@ body{
   z-index: 1;
 }
 
+/* Submit button */
 #submit_button{
   width: 20%;
   height: 55px;
@@ -48,19 +50,19 @@ body{
   transition: 0.5s;
 }
 
-#submit_button:hover{
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-#submit_text{
-  transition: 0.3s all;
-}
-
 /* Expand our input field when on desktop */
 @media screen and (min-width: 1281px){
   #number_text:focus, #pass_text:focus{
     width: 25%;
+  }
+
+  #number_text{
+    margin-top: 20%;
+  }
+
+  #submit_button:hover{
+    opacity: 0.7;
+    cursor: pointer;
   }
 }
 
@@ -98,10 +100,6 @@ body{
     margin-top: 10%;
   }
 
-  #inputs{
-    margin-top: 10%;
-  }
-
   #submit_button{
     width: 50%;
     height: 75px;
@@ -110,17 +108,24 @@ body{
   }
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+/* WebKit, Blink, Edge */
+::-webkit-input-placeholder {
   color: #FFFF00;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
   color: #FFFF00;
   opacity: 1;
 }
- ::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+/* Mozilla Firefox 19+ */
+ ::-moz-placeholder {
   color: #FF0000;
   opacity: 1;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
   color: #FF0000;
 }
