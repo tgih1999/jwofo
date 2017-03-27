@@ -79,30 +79,6 @@ function closeNav() {
     });
   }
 
-  login_button = document.getElementById('login_button');
-
-  if ( login_button){
-
-    login_button.addEventListener('click', e => {
-      const username = document.getElementById('username_text');
-      const password_account = document.getElementById('password_login_text');
-
-      var pass, num;
-      var temp = firebase.database().ref('bikeObject/' + username.value);
-
-      temp.on('value', function(snapshot) {
-        pass = snapshot.val();
-
-          if (password_account.value == pass || password_account.value.toLowerCase() == pass){
-            console.log("working");
-          }
-          else{
-            console.log("not working");
-          }
-      });
-    });
-  }
-
   function myFunction() {
     const new_text = document.getElementById('submit_text');
     new_text.innerHTML = "Ofo me!";

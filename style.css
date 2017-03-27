@@ -17,41 +17,37 @@ body{
   z-index: -1;
   position: fixed;
 }
+
 #number_text, #pass_text{
-    width: 20%;
-    height: 55px;
-    box-sizing: border-box;
-    border: 4px solid #FFFF00;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #FFFF00;
-    background-color: transparent;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    z-index: 1;
+  width: 20%;
+  height: 55px;
+  box-sizing: border-box;
+  border: 4px solid #FFFF00;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #FFFF00;
+  background-color: transparent;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  z-index: 1;
 }
 
-  #number_text:focus, #pass_text:focus{
-    width: 25%;
-  }
+#submit_button{
+  width: 20%;
+  height: 55px;
+  color: black;
+  background-color: #FFFF00;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: 0.5s;
+}
 
-  #submit_button:hover{
-    opacity: 0.7;
-    cursor: pointer;
-  }
-
-  #submit_button{
-    width: 20%;
-    height: 55px;
-    color: black;
-    background-color: #FFFF00;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: 0.5s;
-  }
-
+#submit_button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
 
 #inputs{
   margin-top: 20%;
@@ -64,81 +60,80 @@ body{
   transition: 0.3s all;
 }
 
+/* Expand our input field when on desktop */
+@media screen and (min-width: 1281px){
+  #number_text:focus, #pass_text:focus{
+    width: 25%;
+  }
+}
+
+/* Rules for mobile devices in portrait mode */
+@media screen and (orientation: portrait) and (max-width:1281px){
+  #number_text, #pass_text{
+    width: 70%;
+    height: 100px;
+    box-sizing: border-box;
+    border: 4px solid #FFFF00;
+    border-radius: 4px;
+    font-size: 32px;
+    padding: 12px 20px 12px 40px;
+    z-index: 1;
+    margin-top: 25px;
+  }
+
+  #inputs{
+    margin-top: 55%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #submit_button{
+    width: 70%;
+    height: 100px;
+    font-size: 36px;
+    margin-top: 25px;
+  }
+}
+
+/* Rules for mobile devices in landscape mode */
+@media screen and (orientation: landscape) and (max-width:1281px) {
+  #number_text, #pass_text{
+    width: 50%;
+    height: 75px;
+    box-sizing: border-box;
+    border: 4px solid #FFFF00;
+    border-radius: 4px;
+    font-size: 28px;
+    padding: 12px 20px 12px 40px;
+    z-index: 1;
+    margin-top: 15px;
+  }
+
+  #inputs{
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+  }
+
+  #submit_button{
+    width: 50%;
+    height: 75px;
+    font-size: 28px;
+    margin-top: 15px;
+  }
+}
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #FFFF00;
+  color: #FFFF00;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #FFFF00;
-   opacity:  1;
+  color: #FFFF00;
+  opacity: 1;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #FF0000;
-   opacity:  1;
+ ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #FF0000;
+  opacity: 1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #FF0000;
+  color: #FF0000;
 }
-
- @media screen and (orientation: portrait) and (max-width:1024px){
-   #number_text, #pass_text{
-     width: 70%;
-     height: 100px;
-     box-sizing: border-box;
-     border: 4px solid #FFFF00;
-     border-radius: 4px;
-     font-size: 32px;
-     background-color: transparent;
-     padding: 12px 20px 12px 40px;
-     z-index: 1;
-     margin-top: 25px;
-   }
-
-   #inputs{
-     margin-top: 55%;
-     width: 100%;
-     height: 100%;
-   }
-
-   #submit_button{
-     width: 70%;
-     height: 100px;
-     color: black;
-     background-color: #FFFF00;
-     border: none;
-     border-radius: 4px;
-     font-size: 36px;
-     margin-top: 25px;
-   }
- }
-
- @media screen and (orientation: landscape) and (max-width:1024px) {
-   #number_text, #pass_text{
-     width: 50%;
-     height: 75px;
-     box-sizing: border-box;
-     border: 4px solid #FFFF00;
-     border-radius: 4px;
-     font-size: 28px;
-     background-color: transparent;
-     padding: 12px 20px 12px 40px;
-     z-index: 1;
-     margin-top: 15px;
-   }
-
-   #inputs{
-     margin-top: 10%;
-     width: 100%;
-     height: 100%;
-   }
-
-   #submit_button{
-     width: 50%;
-     height: 75px;
-     color: black;
-     background-color: #FFFF00;
-     border: none;
-     border-radius: 4px;
-     font-size: 28px;
-     margin-top: 15px;
-   }
- }
