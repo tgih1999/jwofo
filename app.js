@@ -1,3 +1,10 @@
+/* File: app.js
+ * Date: March 22nd, 2017
+ * Name: Eric Lin
+ * Description: This file contains the necessary JavaScript functions for
+ * our Ofo Bike website
+ */
+
 $(document).keypress(function(e) {
   if(e.which == 13) {
     document.getElementById('submit_button').click();
