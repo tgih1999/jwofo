@@ -75,9 +75,9 @@ body{
     font-size: 32px;
     margin-top: 25px;
   }
-  
+
   #inputs{
-    margin-top: 55%;
+    margin-top: calc((100% - 375px)/ 2);
   }
 
   #submit_button{
