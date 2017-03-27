@@ -75,11 +75,7 @@ body{
     font-size: 32px;
     margin-top: 25px;
   }
-
-  #number_text:focus, #pass_text:focus{
-    font-size: 16px;
-  }
-
+  
   #inputs{
     margin-top: 55%;
   }
