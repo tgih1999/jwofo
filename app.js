@@ -67,22 +67,28 @@ function closeNav() {
       var pass, num;
       var temp = firebase.database().ref('bikeObject/password');
 
+
       temp.on('value', function(snapshot) {
         pass = snapshot.val();
-
+        var temp2 = firebase.database().ref('bikeObject/password2');
         var temp = firebase.database().ref('bikeObject/' + number.value);
-        temp.on('value', function(snapshot) {
-          num = snapshot.val();
 
-          if (password.value == pass && num != undefined){
-            new_text.innerHTML = num;
-          }
-          else{
-            new_text.innerHTML = "Try Again";
-            setTimeout(myFunction, 3000)
-          }
+        temp2.on('value', function(snapshot) {
+            pass2 = snapshot.val();
+
+            temp.on('value', function(snapshot) {
+              num = snapshot.val();
+
+              if ((password.value == pass || password.value == pass2) && num != undefined){
+                new_text.innerHTML = num;
+              }
+              else{
+                new_text.innerHTML = "Try Again";
+                setTimeout(myFunction, 3000)
+              }
+            });
+          });
         });
-      });
     });
   }
 
