@@ -74,21 +74,21 @@ function closeNav() {
         var temp = firebase.database().ref('bikeObject/' + number.value);
 
         temp2.on('value', function(snapshot) {
-            pass2 = snapshot.val();
+          pass2 = snapshot.val();
 
-            temp.on('value', function(snapshot) {
-              num = snapshot.val();
+          temp.on('value', function(snapshot) {
+            num = snapshot.val();
 
-              if ((password.value == pass || password.value == pass2) && num != undefined){
-                new_text.innerHTML = num;
-              }
-              else{
-                new_text.innerHTML = "Try Again";
-                setTimeout(myFunction, 3000)
-              }
-            });
+            if ((password.value == pass || password.value == pass2) && num != undefined){
+              new_text.innerHTML = num;
+            }
+            else{
+              new_text.innerHTML = "Try Again";
+              setTimeout(myFunction, 3000)
+            }
           });
         });
+      });
     });
   }
 
