@@ -11,14 +11,31 @@ $(document).keypress(function(e) {
   }
 });
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "300px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
+$('#switch').change(function(){
+    const checkbox = document.getElementById('switch');
+    if (checkbox.checked == true){
+      document.getElementById('background_image').style.visibility = "hidden";
+      document.getElementById('submit_button').style.backgroundColor = "black";
+      document.getElementById('submit_text').style.color = "white";
+      document.getElementById('number_text').style.border = "4px solid black";
+      document.getElementById('pass_text').style.border = "4px solid black";
+      $("#number_text").addClass("places");
+      $("#pass_text").addClass("places");
+      document.getElementById('number_text').style.color = "black";
+      document.getElementById('pass_text').style.color = "black";
+    }
+    else{
+      document.getElementById('background_image').style.visibility = "visible";
+      document.getElementById('submit_button').style.backgroundColor = "#FFFF00";
+      document.getElementById('submit_text').style.color = "black";
+      document.getElementById('number_text').style.border = "4px solid #FFFF00";
+      document.getElementById('pass_text').style.border = "4px solid #FFFF00";
+      $("#number_text").removeClass("places");
+      $("#pass_text").removeClass("places");
+      document.getElementById('number_text').style.color = "#FFFF00";
+      document.getElementById('pass_text').style.color = "#FFFF00";
+    }
+})
 
 (function() {
   const config = {
@@ -35,7 +52,7 @@ function closeNav() {
   pass_form = document.getElementById('pass_text');
 
   bike_form.addEventListener('click', e => {
-    number_text.placeholder = "Valid Bikes: 0001-0500";
+    number_text.placeholder = "Valid Bikes: 0001-7000";
   });
 
   pass_form.addEventListener('click', e => {
@@ -55,6 +72,8 @@ function closeNav() {
     event.stopPropagation();
   });
 
+  checkbox = document.getElementById('switch');
+
   submit_button = document.getElementById('submit_button');
   if ( submit_button){
 
@@ -66,7 +85,6 @@ function closeNav() {
 
       var pass, num;
       var temp = firebase.database().ref('bikeObject/password');
-
 
       temp.on('value', function(snapshot) {
         pass = snapshot.val();
