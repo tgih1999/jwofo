@@ -23,6 +23,12 @@ $('#switch').change(function(){
       $("#pass_text").addClass("places");
       document.getElementById('number_text').style.color = "black";
       document.getElementById('pass_text').style.color = "black";
+      document.getElementById('reset').style.backgroundColor = "black";
+      document.getElementById('reset').style.border = "4px solid black";
+      document.getElementById('reset_two').style.backgroundColor = "black";
+      document.getElementById('reset_two').style.border = "4px solid black";
+      document.getElementById('reset_logo').src = "Images/reset_invert.png";
+      document.getElementById('mail_logo').src = "Images/mail_invert.png";
     }
     else{
       document.getElementById('background_image').style.visibility = "visible";
@@ -34,6 +40,12 @@ $('#switch').change(function(){
       $("#pass_text").removeClass("places");
       document.getElementById('number_text').style.color = "#FFFF00";
       document.getElementById('pass_text').style.color = "#FFFF00";
+      document.getElementById('reset').style.backgroundColor = "#FFFF00";
+      document.getElementById('reset').style.border = "4px solid #FFFF00";
+      document.getElementById('reset_two').style.backgroundColor = "#FFFF00";
+      document.getElementById('reset_two').style.border = "4px solid #FFFF00";
+      document.getElementById('reset_logo').src = "Images/reset.png";
+      document.getElementById('mail_logo').src = "Images/mail.png";
     }
 })
 

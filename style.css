@@ -40,6 +40,7 @@ body{
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   z-index: 1;
+
 }
 
 .places::-webkit-input-placeholder{
@@ -72,6 +73,7 @@ body{
     opacity: 0.7;
     cursor: pointer;
   }
+
   .switch{
     float: right;
     margin-right: 20%;
@@ -98,6 +100,7 @@ body{
     border: 4px solid #FFFF00;
     padding: 5px 20px 12px 25px;
     cursor: hand;
+    transition: 0.5s;
   }
 
   #reset_logo{
@@ -120,6 +123,7 @@ body{
     font-size: 18px;
     border: 4px solid #FFFF00;
     padding: 9px 20px 12px 18px;
+    transition: 0.5s;
   }
 
   input:checked + .slider:before {
@@ -183,6 +187,7 @@ body{
     border: 4px solid #FFFF00;
     padding: 10px 20px 12px 25px;
     cursor: hand;
+    transition: 0.5s;
   }
 
   #reset_logo{
@@ -206,6 +211,7 @@ body{
     font-size: 18px;
     border: 4px solid #FFFF00;
     padding: 19px 20px 12px 15px;
+    transition: 0.5s;
   }
 
 }
@@ -261,6 +267,7 @@ body{
     border: 4px solid #FFFF00;
     padding: 10px 20px 12px 25px;
     cursor: hand;
+    transition: 0.5s;
   }
 
   #reset_logo{
@@ -284,6 +291,7 @@ body{
     font-size: 18px;
     border: 4px solid #FFFF00;
     padding: 10px 20px 12px 15px;
+    transition: 0.5s;
   }
 }
 
