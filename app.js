@@ -38,6 +38,7 @@ $('#switch').change(function(){
 })
 
 (function() {
+
   const config = {
     apiKey: "AIzaSyCgh3nk8nxUoqFir2LjKYuYiYaRPtQKT0c",
     authDomain: "ofome-f7639.firebaseapp.com",
@@ -73,6 +74,15 @@ $('#switch').change(function(){
   });
 
   checkbox = document.getElementById('switch');
+
+  reset_button = document.getElementById('reset');
+  num_t = document.getElementById('number_text');
+  pass_t = document.getElementById('pass_text');
+
+  reset_button.addEventListener('click', e=>{
+    num_t.value = "";
+    pass_t.value = "";
+  });
 
   submit_button = document.getElementById('submit_button');
   if ( submit_button){
